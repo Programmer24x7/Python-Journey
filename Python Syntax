@@ -1,0 +1,12 @@
+#Python Syntax 
+#Python syntax is very simple its like writing notes.
+#The is no need of adding " ; " end of the code like c, c++ or java.
+
+#Example:
+# here a, b, c, are variables.
+# variable is just a term to assign a value and following we can perform basic function with that.
+
+a = 10
+b = 12
+c = a + b
+print(c)
