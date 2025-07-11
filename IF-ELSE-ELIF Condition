@@ -1,0 +1,23 @@
+#if_else_elif:
+
+a = 10
+b = 20
+
+if a > b:
+    print("a is greater than b")
+elif a < b:
+    print("a is less than b")
+else:
+    print("a is equal to b")
+
+#using Gemini AI:
+
+#prompt: a = 10 and b = 20 please print the conditions using if, else and Elif to see which variable has large value and small value.
+
+#output:
+if a > b:
+    print("a is greater than b")
+elif a < b:
+    print("a is less than b")
+else:
+    print("a is equal to b")
