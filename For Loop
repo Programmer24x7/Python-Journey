@@ -1,0 +1,39 @@
+#For Loop
+
+a = 10 
+
+for i in range(a):
+  a = a + 1
+  print(i, a)
+
+#output
+0 11
+1 12
+2 13
+3 14
+4 15
+5 16
+6 17
+7 18
+8 19
+9 20
+
+#using Gemini AI
+# prompt: create a example of for loop
+
+# For Loop Example (Corrected)
+# The previous loop was modifying the loop variable 'a' which is generally not
+# recommended and can lead to unexpected behavior. This example iterates over
+# a list of numbers.
+
+numbers = [1, 2, 3, 4, 5]
+
+for num in numbers:
+  print(f"Current number: {num}")
+
+#output:
+Current number: 1
+Current number: 2
+Current number: 3
+Current number: 4
+Current number: 5
