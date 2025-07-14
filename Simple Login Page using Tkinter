@@ -1,0 +1,51 @@
+import tkinter as tk
+from tkinter import messagebox
+
+USERNAME = "admin"
+PASSWORD = "password123"
+
+def login():
+    user = username_entry.get()
+    pwd = password_entry.get()
+    if user == USERNAME and pwd == PASSWORD:
+        messagebox.showinfo("Login Success", f"Welcome, {user}!")
+    else:
+        messagebox.showerror("Login Failed", "Invalid username or password")
+
+def on_enter(e):
+    login_button.config(bg="#45a049")
+
+def on_leave(e):
+    login_button.config(bg="#4CAF50")
+
+root = tk.Tk()
+root.title("Colorful Login Page")
+root.geometry("1280x720")
+root.configure(bg="#e0f7fa")
+root.resizable(False, False)
+
+frame = tk.Frame(root, bg="#ffffff", bd=5, relief=tk.RIDGE)
+frame.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
+
+title = tk.Label(frame, text="LOGIN", font=("Arial", 18, "bold"), bg="#ffffff", fg="#00796B")
+title.pack(pady=10)
+
+# Username
+tk.Label(frame, text="Username", font=("Arial", 12), bg="#ffffff").pack(pady=(10,0))
+username_entry = tk.Entry(frame, font=("Arial", 12), bd=2, relief=tk.GROOVE)
+username_entry.pack(padx=20, pady=5)
+
+# Password
+tk.Label(frame, text="Password", font=("Arial", 12), bg="#ffffff").pack(pady=(10,0))
+password_entry = tk.Entry(frame, font=("Arial", 12), bd=2, relief=tk.GROOVE, show="*")
+password_entry.pack(padx=20, pady=5)
+
+# Login Button
+login_button = tk.Button(frame, text="Login", font=("Arial", 12, "bold"), bg="#4CAF50", fg="white",
+                         padx=10, pady=5, command=login)
+login_button.pack(pady=20)
+
+login_button.bind("<Enter>", on_enter)
+login_button.bind("<Leave>", on_leave)
+
+root.mainloop()
